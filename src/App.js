@@ -1,12 +1,25 @@
 import React from 'react';
-
 import './App.css';
+import Header from './Components/Header/Header';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
+import Home from './Components/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Router>
+     <Header/>
+     <Switch>
+     <Home></Home>
+
+     </Switch>
+    </Router>
   );
 }
 

@@ -3,7 +3,7 @@ var Vol = [
         title: 'Children Support',
         image: 'https://i.ibb.co/chc2PzP/child-Support.png',
         volType: 'ChildrenSupport',
-        color: 'green'
+        color: 'Aquamarine'
     },
     {
         title: 'Refuge Shelter',
@@ -15,26 +15,26 @@ var Vol = [
         title: 'Food Charity',
         image: 'https://i.ibb.co/NnhghPd/food-Charity.png',
         volType: 'FoodCharity',
-        color: 'green'
+        color: 'Coral'
     },
     {
         title: 'Host a Clothing Swap',
         image: 'https://i.ibb.co/L617fSg/cloth-Swap.png',
         volType: 'ClothingSwap',
-        color: 'yellow'
+        color: 'Pink'
         
     },
     {
         title: 'Host a River Clean-Up',
         image: 'https://i.ibb.co/9yBFT4v/river-Clean.png',
         volType: 'RiverCleanUp',
-        color: 'blue'
+        color: 'orange'
     },
     {
         title: 'Clean Water for Children',
         image: 'https://i.ibb.co/YN7qcjL/clean-Water.png',
         volType: 'CleanWaterForChildren',
-        color: 'yellow'
+        color: 'Pink'
     },
     {
         title: 'Good Education',
@@ -58,19 +58,19 @@ var Vol = [
         title: 'Clean up Your Local Park',
         image: 'https://i.ibb.co/jzZpqtJ/clearn-Park.png',
         volType: 'CleanUpYourLocalPark',
-        color: 'Cerulean'
+        color: 'Tan'
     },
     {
         title: 'Organize books for the Library',
         image: 'https://i.ibb.co/GpLHwjG/library-Books.png',
         volType: 'OrganizeLibrary',
-        color: 'blue'
+        color: 'Coral'
     },
     {
         title: 'Give free music lessons',
         image:  'https://i.ibb.co/NsTRJt2/music-Lessons.png',
         volType: 'Give Free Music',
-        color: 'green'
+        color: 'Silver'
     },
     {
         title: 'Teach people how to register to vote',
@@ -82,7 +82,7 @@ var Vol = [
         title: 'Humanity more volunteer activities',
         image:  'https://i.ibb.co/Tr5yxJL/extra-Volunteer.png',
         volType: 'Humanity activities',
-        color: 'Scarlet'
+        color: 'Pink'
     },
     {
         title: 'Foster a shelter animal',
@@ -100,7 +100,7 @@ var Vol = [
         title: 'Babysit during PTA meetings',
         image:  'https://i.ibb.co/YWgn38S/babySit.png',
         volType: 'babySit',
-        color: 'Ochre'
+        color: 'Silver'
     },  {
         title: 'Collect Stuffed Animals',
         image:  'https://i.ibb.co/b6bdW1G/stuffed-Animals.png',
@@ -111,7 +111,7 @@ var Vol = [
         title: 'Give a Seminer on Driving Safety',
         image:  'https://i.ibb.co/HYJwrzp/drive-Safety.png',
         volType: 'Seminer on driving Safety',
-        color: 'Jungle green'
+        color: 'Coral'
     },
     {
         title: 'Give IT Help to Local Adults',
