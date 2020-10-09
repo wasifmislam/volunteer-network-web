@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
-import fakeData from '../../fakeData/Fake'
+import React, { useEffect, useState } from 'react';
 import Task from '../Task/Task';
 const Home = () => {
-    const first20 = fakeData.slice(0,20);
-    const [works, setWorks] = useState(first20)
+    
+    const [works, setWorks] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/works')
+        .then(res => res.json())
+        .then(data => setWorks(data))
+
+    }, [])
     return (
         <div className = "row">
             {

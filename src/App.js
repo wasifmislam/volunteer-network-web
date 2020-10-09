@@ -15,6 +15,7 @@ import Login from './Components/Login/Login';
 import { createContext } from 'react';
 import { useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Editor from './Components/Editor/Editor';
 
 export const UserContext = createContext();
 
@@ -35,6 +36,9 @@ function App() {
      </PrivateRoute>
      <Route path='/login'>
        <Login/>
+     </Route>
+     <Route>
+       <Editor/>
      </Route>
 
      </Switch>

@@ -20,7 +20,7 @@ const Header = () => {
                         <Link to="/home">Home</Link>
                     </li>
                     <li>
-                        <Link to="/donation">Donation</Link>
+                        <Link to="/editor">Editor</Link>
                     </li>
                     <li>
                         <Link to="/events/:volType">Events</Link>
