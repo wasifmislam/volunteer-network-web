@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css';
 import header from '../../images/header.jpg';
 import logo from '../../images/logo.png';
 import { Link } from 'react-router-dom';
 import { Button, TextField } from '@material-ui/core';
+import { useState } from 'react';
+import { UserContext } from '../../App';
 
 const Header = () => {
+     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     return (
         <div style={{ backgroundImage: ` url(${header})` }} className="header">
             <nav className="nav">
@@ -27,7 +30,7 @@ const Header = () => {
                     </li>
                     
                     <li>
-                        <strong></strong>
+                         <strong>{loggedInUser.name}</strong>
                     </li>
                    <li>
                        <Link to="/registration/:volType">
