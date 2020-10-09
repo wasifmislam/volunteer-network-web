@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link, useParams } from 'react-router-dom';
@@ -10,14 +10,16 @@ const Registraion = () => {
 
 
   const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = data => console.log(data);
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const onSubmit = data => console.log('fom submitted',data);
+  const {volType} = useParams();
     return (
         <div >
             <form className='reg-form' onSubmit = { handleSubmit(onSubmit) } >
-      < input name = "name"   ref = { register({ required: true }) } placeholder="Full Name" />
+      < input name = "name"  defaultValue={loggedInUser.name}  ref = { register({ required: true }) } placeholder="Full Name" />
       { errors.name && <span className='error'>Full Name is required</span> }
 
-      < input name = "email"   ref = { register({ required: true }) } placeholder="Email"  />
+      < input name = "email"  defaultValue={loggedInUser.email}  ref = { register({ required: true }) } placeholder="Email"  />
       { errors.email && <span className='error'>Email is required</span> }
 
       < input name = "date" ref = { register({ required: true }) } placeholder="Date"  />
@@ -26,7 +28,7 @@ const Registraion = () => {
       < input name = "description" ref = { register({ required: true }) } placeholder="Description"  />
       
 
-      < input name = "task"  ref = { register({ required: true }) } placeholder="Task"  />
+      < input name = "task"  defaultValue={volType} ref = { register({ required: true }) } placeholder="Task"  />
       
       <br/>
       
