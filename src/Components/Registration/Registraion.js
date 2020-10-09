@@ -12,7 +12,7 @@ const Registraion = () => {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = data => console.log(data);
     return (
-        <div>
+        <div >
             <form className='reg-form' onSubmit = { handleSubmit(onSubmit) } >
       < input name = "name"   ref = { register({ required: true }) } placeholder="Full Name" />
       { errors.name && <span className='error'>Full Name is required</span> }

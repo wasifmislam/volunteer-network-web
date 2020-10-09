@@ -14,6 +14,7 @@ import Registraion from './Components/Registration/Registraion';
 import Login from './Components/Login/Login';
 import { createContext } from 'react';
 import { useState } from 'react';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -29,9 +30,9 @@ function App() {
      <Route path='/home'>
      <Home/>
      </Route>
-     <Route path='/registration/:volType'>
+     <PrivateRoute path='/registration/:volType'>
        <Registraion/>
-     </Route>
+     </PrivateRoute>
      <Route path='/login'>
        <Login/>
      </Route>
