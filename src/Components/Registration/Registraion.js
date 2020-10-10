@@ -65,4 +65,3 @@ const Registraion = () => {
     }
 export default Registraion;
 
-//<Link to='/events'>   <Button >Go to</Button> </Link>
