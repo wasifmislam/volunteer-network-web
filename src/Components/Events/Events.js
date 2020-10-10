@@ -5,27 +5,28 @@ import SeeEvents from './SeeEvents/SeeEvents';
 
 const Events = () => {
     const [eventRegistration, setEventRegistration] = useState([])
+    const[loggedInUser, setLoggedInUser] = useContext(UserContext)
     console.log(eventRegistration)
 
     useEffect(()=>{
-        fetch('http://localhost:5000/enrolledEvents')
+        fetch('http://localhost:5000/enrolledEvents?email='+loggedInUser.email)
         .then(res => res.json())
         .then(data => setEventRegistration(data))
     }, [])
 
     return (
-        <div>
-            <Card>
+        <div className = "row">
+            
                
-    {/* <h1>{loggedInUser.name}</h1> */}
-                    <h4>events</h4>
+    
                     
-                     {/* <Button onClick ="deleteItem('$props_volType')">Delete</Button> */}
+                    
+                     
                      {
                          eventRegistration.map(events => <SeeEvents events={events}></SeeEvents> )
                      }
                 
-                </Card>
+                
         </div>
     );
 };

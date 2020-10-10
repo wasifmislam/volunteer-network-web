@@ -27,8 +27,8 @@ const Registraion = () => {
     })
    
   }
+  //'
   
-
 
     return (
         <div >

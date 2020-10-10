@@ -32,6 +32,9 @@ function App() {
      <Route path='/home'>
      <Home/>
      </Route>
+     <Route exact path="/">
+       <Home></Home>
+     </Route>
      <PrivateRoute path='/registration/:volType'>
        <Registraion/>
      </PrivateRoute>
@@ -44,6 +47,7 @@ function App() {
      <Route>
        <Editor/>
      </Route>
+     
      
 
      </Switch>
