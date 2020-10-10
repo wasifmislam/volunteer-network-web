@@ -1,8 +1,12 @@
-import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { Button, Card, Col } from 'react-bootstrap';
+// import { useParams } from 'react-router-dom';
+// import { UserContext } from '../../../App';
 
 const SeeEvents = (props) => {
-    const{name, email, date, description, task} = props.events
+    const{name, email, date, task} = props.events
+    // const[loggedInUser, setLoggedInUser] = useContext(UserContext)
+    // const {volType} = useParams();
     return (
         <div className ="col-md-6">
             <Col>
@@ -12,16 +16,13 @@ const SeeEvents = (props) => {
             <Card.Title><h5>Name: {name}</h5> </Card.Title>
             <Card.Title><p>Email: {email}</p> </Card.Title>
             <Card.Title><p>Date: {date}</p> </Card.Title>
-            {/* <h3>{name}</h3>
-            <h4>{email}</h4>
-            <h5>{date}</h5>
-            <h6>{description}</h6>
-            <h6>{task}</h6> */}
+             {/* <Button onSubmit={deleteItem(`${loggedInUser._volType}`) } type ="submit">Delete</Button> */}
             </Card.Body>
             </Card>
             </Col>
         </div>
     );
+   
 };
 
 export default SeeEvents;

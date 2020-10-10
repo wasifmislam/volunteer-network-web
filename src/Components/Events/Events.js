@@ -6,7 +6,7 @@ import SeeEvents from './SeeEvents/SeeEvents';
 const Events = () => {
     const [eventRegistration, setEventRegistration] = useState([])
     const[loggedInUser, setLoggedInUser] = useContext(UserContext)
-    console.log(eventRegistration)
+    // console.log(eventRegistration)
 
     useEffect(()=>{
         fetch('http://localhost:5000/enrolledEvents?email='+loggedInUser.email)

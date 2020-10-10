@@ -5,6 +5,8 @@ import { Link, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
 import './Registration.css';
 
+
+
 const Registraion = () => {
   
   const { register, handleSubmit, watch, errors } = useForm();
@@ -22,6 +24,7 @@ const Registraion = () => {
     })
     .then(res => res.json())
     .then(data => {
+      
       // console.log('fom submitted',data, loggedInUser);
       console.log('Data',data);
     })
@@ -49,7 +52,8 @@ const Registraion = () => {
       
       <br/>
       
-      <Button onSubmit = { handleSubmit(onSubmit) } type ="submit">Registration</Button>
+         <Button onSubmit = { handleSubmit(onSubmit) } type ="submit">Registration</Button> 
+         <Link to='/events'>   <Button >See Your Events</Button> </Link>
       
            
            
