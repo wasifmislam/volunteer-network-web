@@ -6,13 +6,29 @@ import { UserContext } from '../../App';
 import './Registration.css';
 
 const Registraion = () => {
-
-
-
+  
   const { register, handleSubmit, watch, errors } = useForm();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const onSubmit = data => console.log('fom submitted',data);
   const {volType} = useParams();
+
+  const onSubmit = data => {
+    const newRegistration = {...loggedInUser , register: data}
+      
+    fetch('http://localhost:5000/addRegistration', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(newRegistration)
+    })
+    .then(res => res.json())
+    .then(data => {
+      // console.log('fom submitted',data, loggedInUser);
+      console.log('Data',data);
+    })
+   
+  }
+  
+
+
     return (
         <div >
             <form className='reg-form' onSubmit = { handleSubmit(onSubmit) } >
@@ -32,7 +48,8 @@ const Registraion = () => {
       
       <br/>
       
-      <Button  type="submit">Registration</Button>
+      <Button onSubmit = { handleSubmit(onSubmit) } type ="submit">Registration</Button>
+      
            
            
            

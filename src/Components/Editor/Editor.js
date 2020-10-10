@@ -14,7 +14,8 @@ const Editor = () => {
     }
     return (
         <div>
-            <button onClick={handleAddActivities}>Add Activity</button>
+            {/* <button onClick={handleAddActivities}>Add Activity</button> */}
+           
         </div>
     );
 };

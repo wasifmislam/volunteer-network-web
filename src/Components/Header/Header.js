@@ -23,7 +23,7 @@ const Header = () => {
                         <Link to="/editor">Editor</Link>
                     </li>
                     <li>
-                        <Link to="/events/:volType">Events</Link>
+                        <Link to="/events">Events</Link>
                     </li>
                     <li>
                         <Link to="/login">Login</Link>

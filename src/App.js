@@ -16,6 +16,7 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Editor from './Components/Editor/Editor';
+import Events from './Components/Events/Events';
 
 export const UserContext = createContext();
 
@@ -37,9 +38,13 @@ function App() {
      <Route path='/login'>
        <Login/>
      </Route>
+     <Route path='/events'>
+       <Events></Events>
+     </Route>
      <Route>
        <Editor/>
      </Route>
+     
 
      </Switch>
     </Router>
