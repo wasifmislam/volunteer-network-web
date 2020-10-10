@@ -9,10 +9,11 @@ const Registraion = () => {
   
   const { register, handleSubmit, watch, errors } = useForm();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const {volType} = useParams();
+   const {volType} = useParams();
 
   const onSubmit = data => {
-    const newRegistration = {...loggedInUser , register: data}
+    const newRegistration = {...loggedInUser , ...data }
+    
       
     fetch('http://localhost:5000/addRegistration', {
       method: 'POST',
